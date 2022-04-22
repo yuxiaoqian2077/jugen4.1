@@ -1,27 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <jugenheader/>
+  <router-view></router-view>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import HelloWorld from './components/HelloWorld.vue';
+import jugenheader from './components/JugenHeader.vue';
 
 @Options({
   components: {
-    HelloWorld,
+    jugenheader,
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+
+}
 </script>
 
 <style>
 #app {
+  /* margin: 0; */
+  /* padding: 0; */
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 </style>
