@@ -1,4 +1,5 @@
 <template>
+    <jugen-header></jugen-header>
     <h1>jugen为什么选择vue？</h1>
     <p>1</p>
     <h2>示例</h2>
@@ -8,7 +9,10 @@
 
 </template>
 <script lang="ts" setup>
+    import JugenHeader from './JugenHeader.vue';
     import { ElNotification } from 'element-plus';
+
+    
     const sucnotify = (title:string,message:string,time:number) =>{
   
         ElNotification({

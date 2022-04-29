@@ -1,11 +1,12 @@
 <template>
-story
+    <jugen-header></jugen-header>
+    story
 
 
 
 </template>
 <script lang="ts" setup>
-
+import JugenHeader from './JugenHeader.vue';
 
 
 
@@ -13,6 +14,5 @@ story
 </script>
 
 <style scoped>
-
 
 </style>
