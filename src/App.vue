@@ -1,23 +1,20 @@
 <template>
+
   <router-view></router-view>
+
 </template>
 
-<script lang="ts" setup>
-import { onBeforeMount } from 'vue';
-import {useRouter,useRoute} from 'vue-router'
-const router = useRouter()
-const route = useRoute()
-onBeforeMount(()=>{
-  if(route.path=='/jugenstart'){
-    console.log("this is start")
+<script lang="ts">
+import { Options,Vue } from 'vue-class-component';
+
+@Options({
+  components:{
+
   }
-  else{
-    router.push('/jugenmain')
-  }
+})
+export default class App extends Vue{
+
 }
-)
-
-
 
 
 </script>

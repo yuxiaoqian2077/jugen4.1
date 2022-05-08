@@ -1,6 +1,6 @@
 <template>
     <jugen-header></jugen-header>
-    story
+    <p>this is story</p>
 
 
 
