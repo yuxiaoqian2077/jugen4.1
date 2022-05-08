@@ -27,7 +27,7 @@ import { useRouter } from 'vue-router';
 const router = useRouter()
 const toMain = () => {
   router.push({
-    path: '/jugenmain',
+    path: '/',
   })
 }
 
