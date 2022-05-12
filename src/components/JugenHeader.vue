@@ -5,7 +5,7 @@
       <img id="jugenlogo" src="..\assets\jugenlogo.png" alt="jugen logo" style="cursor: pointer;" @click="toMain">
       <h2 id="title" @click="toMain">巨根网页版 jugen website</h2>
 
-      <el-menu-item index="1" route="/jugenmain">首页</el-menu-item>
+      <el-menu-item index="1" route="/">首页</el-menu-item>
       <el-menu-item index="2" route="/jugenstory">故事</el-menu-item>
       <el-menu-item index="3" route="/jugenstart">起始页</el-menu-item>
 
