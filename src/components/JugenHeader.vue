@@ -1,14 +1,15 @@
 <template>
   <div class="welcome">
     <el-backtop :right="100" :bottom="100" />
-    <el-menu mode="horizontal" :router="true">
-      <img id="jugenlogo" src="..\assets\jugenlogo.png" alt="jugen logo" style="cursor: pointer;" @click="toMain">
-      <h2 id="title" @click="toMain">巨根网页版 jugen website</h2>
+    <el-menu mode="horizontal" :router="true" style="display: flex;justify-content:flex-start;border-bottom: 0;height: 60px;" background-color="black" text-color="white" active-text-color="#ffd04b">
 
-      <el-menu-item index="1" route="/">首页</el-menu-item>
-      <el-menu-item index="2" route="/jugenstory">故事</el-menu-item>
-      <el-menu-item index="3" route="/jugenstart">起始页</el-menu-item>
+      <img id="jugenlogo" src="..\assets\jugenlogowhite.jpeg" alt="jugen logo" style="cursor: pointer;" @click="toMain">
+      <h2 id="title" @click="toMain">JUGEN Website 巨根网页版</h2>
 
+        <el-menu-item index="/"  class="menuitem" id="mainitem">首页</el-menu-item>
+        <el-menu-item index="/jugenstory" class="menuitem" id="storyitem">故事</el-menu-item>
+        <el-menu-item index="/jugenstart" class="menuitem" id="startitem">起始页</el-menu-item>
+      
     </el-menu>
 
 
@@ -18,6 +19,7 @@
 </template>
 
 <script lang="ts" setup>
+
 
 
 
@@ -37,11 +39,13 @@ const toMain = () => {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 #title:hover {
-  color: lightgrey;
+  color: rgb(199, 199, 199);
 }
 
 #title {
+  color: white;
   margin-top: 11px;
   margin-left: 10px;
   margin-bottom: 0px;
@@ -50,9 +54,13 @@ const toMain = () => {
 }
 
 #jugenlogo {
-  margin-top: 5px;
-  margin-left: 0px;
+  margin-top: 6px;
+  margin-left: 5px;
   width: 50px;
   height: 50px;
+}
+
+#mainitem{
+  margin-left: 50%;
 }
 </style>

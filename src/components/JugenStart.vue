@@ -15,7 +15,7 @@
 
             </el-select>
             <el-input v-model="input" placeholder="请输入搜索内容" size="large" id="searchinput" :prefix-icon="Search"
-                class="search">
+                class="search" @keyup.enter="search">
             </el-input>
             <el-button type="primary" size="large" @click="search" id="searchbtn" class="search" :icon="Search">搜索
             </el-button>
@@ -32,7 +32,7 @@ import { ElNotification } from 'element-plus';
 import JugenWeather from './JugenWeather.vue'
 const router = useRouter()
 const input = ref('')
-const select = ref('baidu')
+
 const gohome = () => {
 
     router.push({
@@ -43,9 +43,22 @@ const gohome = () => {
 const options = [
     {
         value:'https://www.baidu.com/s?ie=UTF-8&wd=',
-        label:'baidu'
+        label:'百度'
     },
+    {
+        value:'https://search.bilibili.com/all?keyword=',
+        label:'哔哩哔哩'
+    },
+    {
+        value:'https://weixin.sogou.com/weixin?type=2&query=',
+        label:'搜狗微信'
+    }
+    
+    
+
 ]
+const select = ref('https://www.baidu.com/s?ie=UTF-8&wd=')
+
 const search = () => {
     if (input.value.length == 0) {
         ElNotification({
@@ -66,7 +79,11 @@ const search = () => {
 </script>
 
 <style scoped>
-
+.box{
+    height:100vh;
+    padding-top: 20px;
+    padding-left: 20px;
+}
 .searchbox {
     display: flex;
     justify-content: center;
@@ -80,6 +97,6 @@ const search = () => {
 .weather{
     display: flex;
     justify-content: flex-end;
-    margin-right: 3%;
+    margin-right: 20px;
 }
 </style>
