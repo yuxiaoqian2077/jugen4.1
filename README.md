@@ -1,9 +1,15 @@
-# jugen4.1
+# JUGEN4.1
+# JUGEN 是真正的新青年品牌
+[网页链接](http://zhixuewang.xyz)
 # 版本说明
-### 这是一个基本样子
+### 
 # 基础框架
-### vue3+vue-cli
-### vue-cli 运行
+### vue3+vue-cli+element-plus+Typescript
+# vue-cli 运行
 ```
 npm run serve
+```
+# vue-cli 编译
+```
+npm run build
 ```

@@ -1,13 +1,17 @@
 <template>
-    <jugen-header v-if="show"></jugen-header>
+
     <div class="main">
+        
+        
         <!-- <div class="imgs">
             <img src="../assets/jugenlogo.png" id="jugenlogo" alt="jugenlogo">
             <h1 style="margin-top: 75px;font-size:40px;">+</h1>
             <img src="../assets/vuelogo.png" id="vuelogo" alt="vuelogo">
             
         </div> -->
+
         <div class="startpage">
+        <jugen-header></jugen-header>
             <h1 style="font-size: 75px;color: white;padding-top: 50px;padding-left: 50px;" id="jugen-big">JUGEN</h1>
             <h1 style="padding-left: 50px;padding-bottom: 30px;font-style: italic;font-size: 40px;"
                 id="jugen-introwords">WHERE THE<br>TEENS
@@ -26,6 +30,7 @@
             <p>JUGEN是yuxiaoqian2077和xiaomeng联合创办的品牌。</p>
             <h1>为什么它这么不出名？</h1>
             <p>自始至终，他都是我们内部的一个小品牌，没有做太多宣传。现在，我们有很大自信，选择将它公之于众。</p>
+            
         </div>
 
 
@@ -36,37 +41,13 @@
 </template>
 <script lang="ts" setup>
 
-import { onMounted, ref } from 'vue';
+
 import JugenHeader from './JugenHeader.vue';
 
 const toGithub = () => {
     window.location.href = "https://github.com/yuxiaoqian2077/jugen4.1"
 }
-const show = ref(true)
-onMounted(() => {
-    addEventListener("wheel", function (e) {
-        let evt = e || window.event;  //考虑兼容性
-        evt.preventDefault();
-        //写在事件外边，防止被注销
-        var iTime;
 
-
-
-
-        //写在事件内部
-        clearTimeout(iTime);
-        iTime = setTimeout(function () {
-            if (evt.deltaY > 0) {  //在火狐中 向下滚动是3 谷歌是125
-                console.log("向下滚动");
-                show.value = false
-            } else {           //在火狐中 向上滚动是-3 谷歌是-125
-                console.log("向上滚动");
-                show.value = true
-            }
-        }, 100);
-
-    })
-})
 
 
 
@@ -96,7 +77,7 @@ onMounted(() => {
     color: white;
 
     scroll-snap-type: y mandatory;
-
+    
     /* 需要把滚动条设置到直接父容器，
         scroll-snap-type 才能生效，
         默认是在 body 上，现在是 main 上 */
@@ -161,6 +142,7 @@ onMounted(() => {
     height: 100vh;
 
     scroll-snap-align: start;
+    
     background-color: black;
 
 }

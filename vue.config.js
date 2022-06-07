@@ -7,7 +7,7 @@ module.exports = {
     config
       .plugin('html')
       .tap(args => {
-        args[0].title = '巨根网页版jugen'
+        args[0].title = '巨根网页版JUGEN'
         
           ; return args
       })

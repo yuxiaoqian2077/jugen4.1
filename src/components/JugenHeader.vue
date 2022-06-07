@@ -1,16 +1,18 @@
 <template>
   <div class="welcome">
-    <el-backtop :right="100" :bottom="100" />
-    <el-menu mode="horizontal" :router="true" style="display: flex;justify-content:flex-start;border-bottom: 0;height: 60px;" background-color="black" text-color="white" active-text-color="#ffd04b">
+    
+    <div class="header">
 
       <img id="jugenlogo" src="..\assets\jugenlogowhite.jpeg" alt="jugen logo" style="cursor: pointer;" @click="toMain">
       <h2 id="title" @click="toMain">JUGEN Website 巨根网页版</h2>
-
-        <el-menu-item index="/"  class="menuitem" id="mainitem">首页</el-menu-item>
-        <el-menu-item index="/jugenstory" class="menuitem" id="storyitem">故事</el-menu-item>
-        <el-menu-item index="/jugenstart" class="menuitem" id="startitem">起始页</el-menu-item>
+    <div class="item">
+      <h3 id="mainitem" @click="to('')">首页</h3>
+      <h3 class="menuitem" id="storyitem" @click="to('jugenstory')">故事</h3>
+      <h3 class="menuitem" id="startitem" @click="to('jugenstart')">起始页</h3>
       
-    </el-menu>
+    </div>
+      
+    </div>
 
 
 
@@ -33,13 +35,24 @@ const toMain = () => {
   })
 }
 
-
+const to = (rt:any) => {
+  router.push({
+    path: '/'+rt,
+  })
+}
 
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.header{
+  /* display: flex;
+  justify-content:flex-start; */
+  display: flex;
+  border-bottom: 0;
+  height: 60px;
+  background-color: black;
+}
 #title:hover {
   color: rgb(199, 199, 199);
 }
@@ -59,8 +72,20 @@ const toMain = () => {
   width: 50px;
   height: 50px;
 }
-
+.item{
+  display: flex;
+}
 #mainitem{
-  margin-left: 50%;
+  cursor: pointer;
+  color:white;
+  margin-top: 0;
+  padding-top: 15px;
+}
+.menuitem{
+  cursor: pointer;
+  color:white;
+  margin-top: 0;
+  padding-top: 15px;
+  padding-left: 10px;
 }
 </style>

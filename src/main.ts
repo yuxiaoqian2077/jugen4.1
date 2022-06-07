@@ -8,6 +8,11 @@ import JugenMain from './components/JugenMain.vue'
 import JugenStory from './components/JugenStory.vue'
 import JugenStart from './components/JugenStart.vue'
 
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
+
+
 const app = createApp(App)
 const routes = [
     {path:'/', component: JugenMain,name:'JugenMain'},
@@ -29,3 +34,5 @@ app.use(ElementPlus, {
     locale: zhCn,
   })
 app.mount('#app')
+app.use(VueAxios, axios)
+
