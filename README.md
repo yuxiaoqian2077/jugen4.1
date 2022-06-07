@@ -12,4 +12,8 @@ npm run serve
 # vue-cli 编译
 ```
 npm run build
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> ee3c735f92f75418223332b84275c3eb538a83f8
