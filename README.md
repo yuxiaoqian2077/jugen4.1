@@ -1,3 +1,4 @@
+# 此项目已停止维护！正在重构新的版本
 # JUGEN4.1
 # JUGEN 是真正的新青年品牌
 [网页链接](http://zhixuewang.xyz)
